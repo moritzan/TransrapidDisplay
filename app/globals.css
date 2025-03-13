@@ -1,4 +1,10 @@
 /* globals.css (oder in einer separaten CSS-Datei) */
 @import "tailwindcss";
 
+@layer base {
+    html {
+        @apply bg-[#d0d0d5];
+    }
+
+}
 

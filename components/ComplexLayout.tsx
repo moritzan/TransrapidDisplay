@@ -2,7 +2,7 @@
 import FahrzeugübersichtLeft from './FahrzeugübersichtLeft';
 import DummyRectangle1 from './DummyRectangle1';
 import DummyRectangle2 from './DummyRectangle2';
-import DummyPillRight from './DummyPillRight';
+import DummyPillRight from './FahrzeuguebersichtRight';
 import DummyBottomBox from './DummyBottomBox';
 
 const ComplexLayout: React.FC = () => {
