@@ -34,6 +34,7 @@ const SpeedDisplay: React.FC<SpeedDisplayProps> = ({
      const rangeStart =  calculateBarWidth(min, 500);
 
   return (
+    
     <div className="bg-[#d0d0d5] p-4  pr-36 pl-36 "> {/* Äußeres Padding (links/rechts) */}
       {/* Geschwindigkeitsanzeigen (jetzt nebeneinander) */}
       <div className=' border  border-black  p-4   pt-6 pr-4 pl-4'>

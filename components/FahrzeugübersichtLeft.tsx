@@ -17,14 +17,14 @@ const FahrzeuguebersichtLeft: React.FC<LeftPillProps> = () => {
     const [arrowDirection, setArrowDirection] = useState<ArrowDirection>('up');
 
     // State für die Türzustände (E1, M1, E2)
-    const [e1DoorStatus, setE1DoorStatus] = useState<DoorStatus[]>(['closed_released', 'closed_released']);
-    const [m1DoorStatus, setM1DoorStatus] = useState<DoorStatus[]>(['closed_released', 'closed_released']);
-    const [e2DoorStatus, setE2DoorStatus] = useState<DoorStatus[]>(['closed_released', 'closed_released']);
+    const [e1DoorStatus, setE1DoorStatus] = useState<DoorStatus[]>(['locked', 'locked']);
+    const [m1DoorStatus, setM1DoorStatus] = useState<DoorStatus[]>(['locked', 'locked']);
+    const [e2DoorStatus, setE2DoorStatus] = useState<DoorStatus[]>(['locked', 'locked']);
 
     // State für Brandmelder, Fahrgastnotsignal und Innenbeleuchtung (E1, M1, E2)
-    const [e1Statuses, setE1Statuses] = useState<[FireAlarmStatus, PassengerSignalStatus, InteriorLightStatus]>(['noAlarm', 'inactive', 'off']);
-    const [m1Statuses, setM1Statuses] = useState<[FireAlarmStatus, PassengerSignalStatus, InteriorLightStatus]>(['noAlarm', 'inactive', 'off']);
-    const [e2Statuses, setE2Statuses] = useState<[FireAlarmStatus, PassengerSignalStatus, InteriorLightStatus]>(['noAlarm', 'inactive', 'off']);
+    const [e1Statuses, setE1Statuses] = useState<[FireAlarmStatus, PassengerSignalStatus, InteriorLightStatus]>(['noAlarm', 'inactive', 'on']);
+    const [m1Statuses, setM1Statuses] = useState<[FireAlarmStatus, PassengerSignalStatus, InteriorLightStatus]>(['noAlarm', 'inactive', 'on']);
+    const [e2Statuses, setE2Statuses] = useState<[FireAlarmStatus, PassengerSignalStatus, InteriorLightStatus]>(['noAlarm', 'inactive', 'on']);
 
     // Hilfsfunktion zum zyklischen Wechseln von Zuständen (korrigiert und vereinfacht)
     const cycleStatus = <T,>(currentStatus: T, states: T[]): T => {
