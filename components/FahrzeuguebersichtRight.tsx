@@ -10,12 +10,10 @@ type WindowHeatingStatus = 'on' | 'off' | 'unknown';
 type PantographStatus = 'up' | 'down' | 'unknown';
 type KlimaStatus = 'on' | 'off' | 'unknown';
 type HeatingStatus = 'on' | 'off' | 'unknown';
-type TemperatureValue = string | 'unknown';
 
 
-interface RightPillProps { }
 
-const FahrzeuguebersichtRight: React.FC<RightPillProps> = () => {
+const FahrzeuguebersichtRight = () => {
 
     // States (E1, M1, E2) - Vereinfacht, da jetzt im Grid
     const [e1Headlight, setE1Headlight] = useState<HeadlightStatus>('on');
@@ -27,11 +25,6 @@ const FahrzeuguebersichtRight: React.FC<RightPillProps> = () => {
     const [m1Pantograph, setM1Pantograph] = useState<PantographStatus>('up');
 
     const [e2Pantograph, setE2Pantograph] = useState<PantographStatus>('up');
-
-    // States (Temperatur)
-    const [e1Temperature, setE1Temperature] = useState<TemperatureValue>('12.1°');
-    const [m1Temperature, setM1Temperature] = useState<TemperatureValue>('12.2°');
-    const [e2Temperature, setE2Temperature] = useState<TemperatureValue>('12.3°');
 
     const [e1Klima, setE1Klima] = useState<KlimaStatus>('on');
     const [m1Klima, setM1Klima] = useState<KlimaStatus>('on');
@@ -138,7 +131,6 @@ const FahrzeuguebersichtRight: React.FC<RightPillProps> = () => {
 
     // Icon-Größe
     const iconSize = 'w-6 h-6';
-    const tempIconSize = 'w-4 h-4';
 
     return (
         <div className="flex flex-col items-center w-32">
@@ -188,7 +180,7 @@ const FahrzeuguebersichtRight: React.FC<RightPillProps> = () => {
                     </div>
                     {/* Spalte 2 */}
                     <div className="grid grid-cols-2 grid-rows-2 gap-0">
-                        <div className="col-span-2 text-center">{e1Temperature}</div>
+                        <div className="col-span-2 text-center">{"21.0°"}</div>
                         <div className={`cursor-pointer row-start-2 text-center${iconSize}`} onClick={() => handleKlimaClick('e1')}>
                             <Image src={`/${getKlimaIcon(e1Klima)}.png`} alt="Klima" width={20} height={20} />
                         </div>
@@ -220,7 +212,7 @@ const FahrzeuguebersichtRight: React.FC<RightPillProps> = () => {
                     </div>
                     {/* Spalte 2 */}
                     <div className="grid grid-cols-2 grid-rows-2 gap-0">
-                        <div className="col-span-2 text-center">{m1Temperature}</div>
+                        <div className="col-span-2 text-center">{"21.2°"}</div>
                         <div className={`cursor-pointer row-start-2 text-center${iconSize}`} onClick={() => handleKlimaClick('m1')}>
                             <Image src={`/${getKlimaIcon(m1Klima)}.png`} alt="Klima" width={20} height={20} />
                         </div>
@@ -252,7 +244,7 @@ const FahrzeuguebersichtRight: React.FC<RightPillProps> = () => {
                     </div>
                     {/* Spalte 2 */}
                     <div className="grid grid-cols-2 grid-rows-2 gap-0">
-                        <div className="col-span-2 text-center">{e2Temperature}</div>
+                        <div className="col-span-2 text-center">{"21.3°"}</div>
                         <div className={`cursor-pointer row-start-2 text-center${iconSize}`} onClick={() => handleKlimaClick('e2')}>
                             <Image src={`/${getKlimaIcon(e2Klima)}.png`} alt="Klima" width={20} height={20} />
                         </div>

@@ -10,9 +10,8 @@ type PassengerSignalStatus = 'active' | 'inactive' | 'unknown';
 type InteriorLightStatus = 'on' | 'off' | 'unknown';
 type ArrowDirection = 'up' | 'down';
 
-interface LeftPillProps { }
 
-const FahrzeuguebersichtLeft: React.FC<LeftPillProps> = () => {
+const FahrzeuguebersichtLeft = () => {
     // State für den Richtungspfeil
     const [arrowDirection, setArrowDirection] = useState<ArrowDirection>('up');
 
@@ -62,7 +61,7 @@ const FahrzeuguebersichtLeft: React.FC<LeftPillProps> = () => {
                         const states = i === 0 ? ['alarm', 'noAlarm', 'unknown'] as FireAlarmStatus[]
                                      : i === 1 ? ['active', 'inactive', 'unknown'] as PassengerSignalStatus[]
                                      : ['on', 'off', 'unknown'] as InteriorLightStatus[];
-                        return cycleStatus(status as any, states); // Type Assertion hier
+                        return cycleStatus(status, states); // Type Assertion hier
                     }
                     return status;
                 }) as [FireAlarmStatus, PassengerSignalStatus, InteriorLightStatus]);
@@ -74,7 +73,7 @@ const FahrzeuguebersichtLeft: React.FC<LeftPillProps> = () => {
                         const states = i === 0 ? ['alarm', 'noAlarm', 'unknown'] as FireAlarmStatus[]
                                      : i === 1 ? ['active', 'inactive', 'unknown'] as PassengerSignalStatus[]
                                      : ['on', 'off', 'unknown'] as InteriorLightStatus[];
-                        return cycleStatus(status as any, states); // Type Assertion hier
+                        return cycleStatus(status, states); // Type Assertion hier
                     }
                     return status;
                 }) as [FireAlarmStatus, PassengerSignalStatus, InteriorLightStatus]);
@@ -86,7 +85,7 @@ const FahrzeuguebersichtLeft: React.FC<LeftPillProps> = () => {
                         const states = i === 0 ? ['alarm', 'noAlarm', 'unknown'] as FireAlarmStatus[]
                                      : i === 1 ? ['active', 'inactive', 'unknown'] as PassengerSignalStatus[]
                                      : ['on', 'off', 'unknown'] as InteriorLightStatus[];
-                        return cycleStatus(status as any, states); // Type Assertion hier
+                        return cycleStatus(status, states); // Type Assertion hier
                     }
                     return status;
                 }) as [FireAlarmStatus, PassengerSignalStatus, InteriorLightStatus]);

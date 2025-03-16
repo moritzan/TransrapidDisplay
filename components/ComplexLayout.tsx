@@ -1,8 +1,6 @@
 // components/ComplexLayout.tsx
 import FahrzeugübersichtLeft from './FahrzeugübersichtLeft';
-import DummyRectangle2 from './DummyRectangle2';
 import FahrzeuguebersichtRight from './FahrzeuguebersichtRight';
-import DummyBottomBox from './DummyBottomBox';
 import BLFBFD from './BFDDisplay';
 import RechteBox from './RechteBox'; 
 import Meldungen from './Meldungen';

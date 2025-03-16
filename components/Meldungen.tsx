@@ -1,5 +1,4 @@
 'use client'
-import { Funnel_Display } from "next/font/google";
 import { useState } from "react";
 type FahrtgastNotsignalStatus = 'off' | 'error' | 'unknown';
 type BMAStatus = 'off' | 'error' | 'unknown';

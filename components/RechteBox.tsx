@@ -1,20 +1,16 @@
 'use client'
 import { useState } from "react";
 import Image from 'next/image';
-type BMAStatus = 'off' | 'error' | 'unknown';
 type LightStatus = 'off' | 'on' | 'unknown';
 
 
-type ButtonStatus = 'on' | 'off' | 'error' | 'unknown';
 
 
 
 
 const RechteBox = () => {
 
-  const [FahrgastNotsignal, setFahrgastnotsignal] = useState<ButtonStatus>('off');
-  const [BMA, setBMA] = useState<ButtonStatus>('off');
-  
+
 
   const [lightStatus, setLightStatus] = useState<LightStatus>('on');
 
@@ -47,12 +43,8 @@ const getLightIcon = (status: LightStatus) => {
     setLightStatus(prev => cycleStatus(prev, states));
   };
 
-  const handleBMAClick = () => {
-    const states: BMAStatus[] = ['off', 'error', 'unknown'];
-    setBMA(prev => cycleStatus(prev, states));
-  };
 
-  
+  {/*}
   const getButtonStatusColor = (status: ButtonStatus): string => {
     switch (status) {
       case 'on':   return 'bg-green-500 text-black' ;
@@ -62,6 +54,7 @@ const getLightIcon = (status: LightStatus) => {
       default:        return 'bg-gray-300'; // Sollte nie vorkommen
     }
   };
+  */}
 
 
   return (
